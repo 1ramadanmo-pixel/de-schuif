@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Schuif | Premium Digitale Menukaart</title>
+    <!-- استدعاء ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="style.css">
+    <!-- استدعاء مكتبة الأيقونات الشهيرة الشهيرة لظهور أيقونة السلة والرموز -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- استدعاء مكتبة الحركات التفاعلية الفاخرة GSAP -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+
+    <!-- Navigatiebalk -->
+    <header class="glass-nav">
+        <div class="logo">DE SCHUIF<span class="neon-dot">.</span></div>
+        <div class="cart-icon-wrapper" onclick="toggleCart()">
+            <div class="cart-icon-btn">
+                <i class="fas fa-shopping-basket"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-blur-bg"></div>
+        <div class="hero-content">
+            <span class="badge"><i class="fas fa-fire"></i> Premium & Vers</span>
+            <h1>Smaakvol <br><span class="gradient-text">Handgemaakt</span></h1>
+            <p>Welkom bij De Schuif. Ontdek onze legendarische broodjes, koude schotels en verse burgers. Bestel snel via WhatsApp!</p>
+            <div class="hero-info-grid">
+                <div class="info-tag"><i class="far fa-clock"></i> Voor 10:00u Bestellen</div>
+                <div class="info-tag"><i class="fas fa-phone-alt"></i> +32 471 89 59 78</div>
+            </div>
+            <button class="cta-btn" onclick="scrollToMenu()">Bekijk het menu <i class="fas fa-chevron-down"></i></button>
+        </div>
+    </section>
+
+    <!-- Filter Tab Knopen -->
+    <section class="categories-section" id="menu-section">
+        <div class="categories-container">
+            <button class="cat-btn active" onclick="filterMenu('all', event)">Alles ✨</button>
+            <button class="cat-btn" onclick="filterMenu('smoskes', event)">Koude Broodjes 🥪</button>
+            <button class="cat-btn" onclick="filterMenu('specialekes', event)">Specialekes ✨</button>
+            <button class="cat-btn" onclick="filterMenu('warm', event)">Warme Burgers 🔥</button>
+            <button class="cat-btn" onclick="filterMenu('schotels', event)">Koude Schotels 🥗</button>
+            <button class="cat-btn" onclick="filterMenu('drinks', event)">Dranken ☕</button>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="radar-container">
+        <div id="product-grid" class="products-grid"></div>
+    </main>
+
+    <!-- Winkelwagen Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Jouw Bestelling 🛒</h3>
+            <button onclick="toggleCart()" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="delivery-options">
+            <label class="radio-label">
+                <input type="radio" name="order-type" value="Afhalen" checked>
+                <span>🛍️ Afhalen</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="order-type" value="Bezorgen">
+                <span>🚴 Bezorgen</span>
+            </label>
+        </div>
+
+        <div id="cart-items" class="cart-items"></div>
+
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Totaalbedrag:</span>
+                <span id="cart-total">0.00 €</span>
+            </div>
+            <button class="order-whatsapp-btn" onclick="sendToWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Bestellen via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>DE SCHUIF<span class="neon-dot">.</span></h2>
+                <p>Kwaliteit en passie in elke hap. De lekkerste broodjes en hamburgers van Turnhout.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-hours">
+                <h3>Openingstijden</h3>
+                <ul>
+                    <li><span>Maandag - Vrijdag:</span> <span>08:30u - 16:00u</span></li>
+                    <li><span>Zaterdag:</span> <span>09:00u - 14:00u</span></li>
+                    <li><span>Zondag:</span> <span class="closed-tag">Gesloten</span></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Turnhout, België</p>
+                <p><i class="fas fa-phone-alt"></i> +32 471 89 59 78</p>
+            </div>
+        </div>
+               <div class="footer-bottom">
+            <p>&copy; 2026 De Schuif. All rights reserved.</p>
+            <p class="designer-tag">Designed by <a href="https://eu-cod.eu" target="_blank" class="neon-link">eu-cod.eu</a></p>
+        </div>
+
+    </footer>
+
+    <!-- استدعاء ملف الجافا سكريبت الخارجي في النهاية لضمان استقرار التحميل -->
+    <script src="script.js"></script>
+</body>
+</html>
