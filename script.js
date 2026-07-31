@@ -149,7 +149,7 @@ function sendToWhatsApp() {
     });
     text += "\n💵 **Totaalbedrag**: " + document.getElementById("cart-total").innerText;
     text += "\n\nAlvast bedankt! ✨";
-    window.open("https://wa.me/32470685016?text=" + encodeURIComponent(text), "_blank");
+    window.open("https://wa.me/32471895978?text=" + encodeURIComponent(text), "_blank");
 }
 
 window.onload = () => {
